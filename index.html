@@ -200,6 +200,91 @@ footer{background:#07111B;border-top:1px solid rgba(184,150,12,0.2);padding:2rem
   .footer{padding:1.25rem 0.9rem}
   .footer-links{width:100%;align-items:flex-start}
 }
+/* Mobile and tablet layout */
+@media (max-width:1024px){
+  nav{height:auto;min-height:68px;flex-direction:column;align-items:center;gap:8px;padding:16px 20px 10px}
+  .nav-logo{text-align:center;line-height:1.35}
+  .nav-logo span{margin-top:4px;color:rgba(255,255,255,.65)}
+  .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:0 18px}
+  .nav-links a{display:flex;align-items:center;min-height:44px;color:rgba(255,255,255,.8)}
+  .hero{height:auto;min-height:680px;min-height:min(820px,85svh);max-height:none;display:flex;align-items:flex-end}
+  .hero-content{position:relative;inset:auto;width:100%;padding:220px 24px 28px;margin:0 auto}
+  .hero-title{font-size:clamp(32px,5.5vw,48px)}
+  .hero-slide img{object-position:center 30%}
+  .hero-eyebrow{color:var(--gold-light)}
+  .hero-subtitle,.hero-stat-label{color:rgba(255,255,255,.8)}
+  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));max-width:520px;gap:1px;margin:0 auto 12px}
+  .hero-dots{padding-bottom:0}
+  .hero-dot{border:0;width:44px;height:44px;background:transparent;display:grid;place-items:center}
+  .hero-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45)}
+  .hero-dot.active{background:transparent}
+  .hero-dot.active::after{background:var(--gold-light)}
+  .timeline::before{left:4px;transform:none}
+  .timeline-item{display:flex;flex-direction:column;gap:8px;padding-left:28px;margin-bottom:28px}
+  .timeline-item::after{left:0;top:8px;transform:none}
+  .timeline-left,.timeline-right{padding:0;text-align:left;margin:0}
+  .timeline-item>div:has(.timeline-year){order:-1}
+  .timeline-event{text-align:left!important}
+  .heritage{grid-template-columns:repeat(2,minmax(0,1fr));padding:24px 20px;gap:0}
+  .heritage-item{border:0;padding:20px 10px}
+  .heritage-item:nth-child(odd){border-right:1px solid rgba(184,150,12,.2)}
+  .heritage-item:nth-child(-n+2){border-bottom:1px solid rgba(184,150,12,.2)}
+  .heritage-sub,.service-day,.service-name,.footer-sub,.footer-links a{color:rgba(255,255,255,.7)}
+  .footer-copy{color:rgba(255,255,255,.5)}
+}
+@media (max-width:650px){
+  nav{position:relative;padding:16px 20px 6px;gap:6px}
+  .nav-logo{font-size:18px;width:100%}
+  .nav-logo span{font-size:11px}
+  .nav-links{gap:0;flex-wrap:nowrap;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+  .nav-links a{justify-content:center;font-size:12px;letter-spacing:0;min-width:0}
+  .hero{min-height:620px;min-height:calc(100svh - 112px)}
+  .hero-content{padding:240px 20px 20px}
+  .hero-overlay{background:linear-gradient(to bottom,rgba(13,27,42,.12) 0%,rgba(13,27,42,.35) 35%,rgba(13,27,42,.85) 68%,rgba(13,27,42,.96) 100%)}
+  .hero-eyebrow{font-size:9px;letter-spacing:.13em;gap:8px;margin-bottom:14px;line-height:1.6}
+  .hero-eyebrow::before,.hero-eyebrow::after{width:18px;flex-shrink:0}
+  .hero-title{font-size:clamp(29px,8vw,40px);line-height:1.18;margin-bottom:10px}
+  .hero-subtitle{font-size:11px;letter-spacing:.04em;line-height:1.7;margin-bottom:16px}
+  .hero-badge{font-size:9px;letter-spacing:.06em;line-height:1.6;padding:8px 12px;margin-bottom:20px;max-width:100%}
+  .hero-stats{width:100%;max-width:380px;margin-bottom:8px;border-radius:6px}
+  .hero-stat{padding:14px 4px;min-width:0}
+  .hero-stat-num{font-size:23px;margin-bottom:6px}
+  .hero-stat-label{font-size:9px;letter-spacing:.04em;line-height:1.4}
+  .hero-dots{gap:0;padding:0}
+  .about,.history,.news,.leaders,.services{padding:40px 20px}
+  .about-title,.history-header h2,.news-header h2,.leaders-header h2,.services h2{font-size:28px;line-height:1.25}
+  .about-body{font-size:15px;line-height:1.8}
+  .about-highlight{font-size:18px;margin:24px 0;padding-left:16px}
+  .photo-strip{padding:28px 20px}
+  .photo-strip-grid{grid-template-columns:1fr;gap:16px}
+  .photo-strip-img{display:block;max-height:none;border-radius:6px}
+  .section-label,.photo-strip-label{font-size:10px;line-height:1.6;letter-spacing:.14em}
+  .heritage-title{font-size:16px;line-height:1.35}
+  .heritage-sub{font-size:11px;line-height:1.6;margin-top:6px}
+  .news-header{align-items:center;gap:12px;flex-wrap:wrap}
+  .news-header a{min-height:44px;display:flex;align-items:center}
+  .news-grid,.leaders-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  .news-card{padding:20px}
+  .news-title{font-size:19px}
+  .news-desc{font-size:14px;line-height:1.7}
+  .leader-card{padding:20px 12px;border-bottom:1px solid var(--cream-dark)}
+  .leader-name{font-size:19px;line-height:1.5}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%}
+  .service-item{padding:20px 10px;min-width:0}
+  .service-name{line-height:1.6}
+  footer{padding:32px 20px;gap:24px;grid-template-columns:minmax(0,1fr)}
+  .footer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px;align-items:start}
+  .footer-links a{min-height:44px;display:flex;align-items:center;line-height:1.5}
+  .footer-copy{line-height:1.7}
+}
+@media (max-width:360px){
+  .nav-logo{font-size:16px}
+  .nav-links a{font-size:11px}
+  .hero-content{padding-left:16px;padding-right:16px}
+  .hero-eyebrow::before,.hero-eyebrow::after{width:10px}
+  .hero-stat-num{font-size:21px}
+}
+
 </style>
 </head>
 <body>
@@ -230,9 +315,9 @@ footer{background:#07111B;border-top:1px solid rgba(184,150,12,0.2);padding:2rem
       <div class="hero-stat"><div class="hero-stat-num">1906</div><div class="hero-stat-label">Church built</div></div>
     </div>
     <div class="hero-dots">
-      <div class="hero-dot active" onclick="goSlide(0)"></div>
-      <div class="hero-dot" onclick="goSlide(1)"></div>
-      <div class="hero-dot" onclick="goSlide(2)"></div>
+      <button type="button" class="hero-dot active" onclick="goSlide(0)" aria-label="Show image 0"></button>
+      <button type="button" class="hero-dot" onclick="goSlide(1)" aria-label="Show image 1"></button>
+      <button type="button" class="hero-dot" onclick="goSlide(2)" aria-label="Show image 2"></button>
     </div>
   </div>
 </section>
